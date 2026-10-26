@@ -1,0 +1,15 @@
+<form method="post" class="needs-validation form-card" novalidate>
+  {% csrf_token %}
+  <div class="row g-3">
+    {% for field in form %}
+      <div class="col-md-6{% if field.name == 'message' %} col-12{% endif %}">
+        <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% if field.errors %}
+          <div class="invalid-feedback d-block">{{ field.errors|striptags }}</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  <button class="btn btn-navy mt-4" type="submit">Send message <i class="bi bi-arrow-right ms-1"></i></button>
+</form>

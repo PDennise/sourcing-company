@@ -1,0 +1,14 @@
+{% extends "website/base.html" %}
+
+{% block title %}Thank you{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container col-lg-8 text-center">
+    <p class="kicker">Received</p>
+    <h1>Thank you. We have your brief.</h1>
+    <p class="lead text-muted">A consultant in Istanbul will review this and reply within one business day{% if kind == 'consultation' %} to confirm a call time{% endif %}.</p>
+    <a class="btn btn-navy mt-3" href="{% url 'home' %}">Back to home</a>
+  </div>
+</section>
+{% endblock %}

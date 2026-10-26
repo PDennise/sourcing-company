@@ -1,0 +1,18 @@
+{% extends "website/base.html" %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <p class="kicker">Let’s start</p>
+    <h1>{{ page_title }}</h1>
+    <p class="lead col-lg-8 px-0 text-muted">{{ intro }}</p>
+  </div>
+</section>
+<section class="section pt-0">
+  <div class="container col-lg-8">
+    {% include "website/includes/inquiry_form.html" %}
+  </div>
+</section>
+{% endblock %}

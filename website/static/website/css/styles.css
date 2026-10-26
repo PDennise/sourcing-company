@@ -1,0 +1,1030 @@
+/* =========================================================
+   1. DESIGN TOKENS
+   ========================================================= */
+
+:root {
+    --navy: #0b1f3a;
+    --navy-deep: #071628;
+    --navy-soft: #163154;
+
+    --gold: #c4a36a;
+    --gold-dark: #a9844c;
+
+    --cream: #f6f3ee;
+    --sand: #efe6d6;
+
+    --ink: #14233a;
+    --muted: #6d7585;
+
+    --line: #e6e1d8;
+    --white: #ffffff;
+
+    --shadow: 0 18px 50px rgba(11, 31, 58, 0.08);
+}
+
+
+/* =========================================================
+   2. GLOBAL STYLES
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.display-serif {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    letter-spacing: -0.02em;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   3. HEADER AND NAVIGATION
+   ========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    padding: 0.85rem 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--navy);
+}
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+}
+
+.brand-copy {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+.brand-copy strong {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.brand-copy span {
+    font-size: 0.58rem;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    text-transform: uppercase;
+}
+
+.nav-link {
+    padding: 0.4rem 0.85rem !important;
+    color: var(--ink) !important;
+    font-size: 0.92rem;
+    font-weight: 500;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: var(--gold-dark) !important;
+}
+
+
+/* =========================================================
+   4. BUTTONS
+   ========================================================= */
+
+.btn-navy {
+    padding: 0.72rem 1.25rem;
+    border: 1px solid var(--navy);
+    border-radius: 999px;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.btn-navy:hover {
+    background: var(--navy-soft);
+    color: var(--white);
+}
+
+.btn-ghost {
+    padding: 0.72rem 1.25rem;
+    border: 1px solid #d7d2c9;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--navy);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.btn-ghost:hover {
+    border-color: var(--navy);
+    color: var(--navy);
+}
+
+.btn-gold {
+    padding: 0.8rem 1.4rem;
+    border: 0;
+    border-radius: 999px;
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.btn-gold:hover {
+    background: var(--gold-dark);
+    color: var(--white);
+}
+
+
+/* =========================================================
+   5. HOME PAGE HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem 0 2rem;
+    background: #fafafa;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero .row {
+    min-height: 350px;
+}
+
+.hero h1 {
+    margin-bottom: 1.2rem;
+    color: var(--navy);
+    font-size: clamp(2.7rem, 4vw, 3.7rem);
+    font-weight: 600;
+    line-height: 0.98;
+}
+
+.hero h1 em {
+    color: var(--gold-dark);
+    font-style: normal;
+}
+
+.hero p.lead {
+    max-width: 34rem;
+    color: var(--ink);
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+.trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.8rem;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.trust-row span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.hero-map {
+    position: relative;
+    display: flex;
+    min-height: 350px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-map img {
+    display: block;
+    width: 130%;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+    transform: translateX(-14%);
+}
+
+
+/* =========================================================
+   6. PAGE HERO
+   Used by About, Services, Industries and other inner pages
+   ========================================================= */
+
+.page-hero {
+    padding: 4.2rem 0 3rem;
+    background: linear-gradient(
+        180deg,
+        #fafafa 0%,
+        #fcfcfc 65%,
+        #ffffff 100%
+    );
+}
+
+.page-hero h1 {
+    margin-bottom: 1rem;
+    color: var(--navy);
+    font-size: clamp(2rem, 3.2vw, 2.8rem);
+    line-height: 1.1;
+}
+
+.page-hero p {
+    color: var(--muted);
+}
+
+.page-hero .lead {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+/* =========================================================
+   7. SHARED SECTIONS AND HEADINGS
+   ========================================================= */
+
+.section {
+    padding: 4.5rem 0;
+    background: var(--white);
+}
+
+.section-soft {
+    background: #fafafa;
+}
+
+.section-title {
+    margin-bottom: 2.4rem;
+    color: var(--navy);
+    font-size: clamp(2rem, 3vw, 2.7rem);
+    text-align: center;
+}
+
+.kicker {
+    color: var(--muted);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   8. ABOUT PAGE
+   ========================================================= */
+
+.section h2 {
+    color: var(--navy);
+    font-size: 1.9rem;
+    line-height: 1.2;
+}
+
+/* Main About page body copy */
+.about-copy {
+    max-width: 58rem;
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+/* Founder card */
+.founder-card {
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fafafa;
+}
+
+.founder-photo {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+}
+
+.founder-copy {
+    padding: 2.4rem 2.2rem;
+}
+
+.founder-copy h2 {
+    color: var(--navy);
+    font-size: 2.3rem;
+}
+
+.signature {
+    margin-bottom: 0;
+    color: var(--navy);
+    font-family: "Great Vibes", cursive;
+    font-size: 2rem;
+}
+
+
+/* Introduction */
+
+.about-hero .container {
+    text-align: center;
+}
+
+.about-hero .kicker {
+    margin-bottom: 0.8rem;
+}
+
+.about-hero h1 {
+    margin-bottom: 1.5rem;
+}
+
+.about-intro {
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.about-intro .lead {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+/* Shared About section layout */
+
+.about-section-title {
+    margin-bottom: 1.5rem;
+    color: var(--navy);
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.about-narrow {
+    max-width: 48rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.about-copy {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* Why Work With Us */
+
+.about-feature-card {
+    height: 100%;
+    text-align: center;
+}
+
+.about-feature-card h3 {
+    margin-bottom: 0.7rem;
+}
+
+/* More Than Sourcing */
+
+.about-service-list {
+    max-width: 58rem;
+    margin: 2rem auto 0;
+}
+
+.about-list-item {
+    display: flex;
+    min-height: 100%;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--white);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.about-list-item i {
+    flex-shrink: 0;
+    color: var(--gold-dark);
+    font-size: 1.15rem;
+}
+
+.about-local-note {
+    max-width: 58rem;
+    margin: 2.5rem auto 0;
+    padding: 2rem;
+    border-left: 3px solid var(--gold);
+    border-radius: 0 12px 12px 0;
+    background: var(--white);
+}
+
+.about-local-note h3 {
+    margin-bottom: 0.7rem;
+    color: var(--navy);
+    font-size: 1.5rem;
+}
+
+.about-local-note p:last-child {
+    line-height: 1.75;
+}
+
+/* The Value of a Local Partner */
+
+.about-challenges {
+    margin-top: 2rem;
+}
+
+.about-challenge-card {
+    height: 100%;
+    padding: 1.5rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--white);
+    text-align: center;
+}
+
+.about-challenge-card i {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: var(--gold-dark);
+    font-size: 1.5rem;
+}
+
+.about-challenge-card p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.about-transition {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-value-card {
+    height: 100%;
+    text-align: center;
+}
+
+.about-value-icon {
+    display: grid;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--gold-dark);
+    font-size: 1.3rem;
+}
+
+.about-value-card h3 {
+    margin-bottom: 0.7rem;
+    color: var(--navy);
+    font-size: 1.2rem;
+}
+
+.about-value-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.about-closing-copy {
+    max-width: 48rem;
+    margin: 2.5rem auto 0;
+    color: var(--navy);
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Our Approach */
+
+.about-principles {
+    margin-top: 2rem;
+}
+
+.about-principle-card {
+    height: 100%;
+    padding: 2rem;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--white);
+    text-align: center;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.about-principle-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.about-principle-number {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--gold-dark);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.about-principle-card h3 {
+    margin-bottom: 0.7rem;
+    color: var(--navy);
+    font-size: 1.4rem;
+}
+
+.about-principle-card p {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.75;
+}
+
+/* Our Mission */
+
+.about-mission {
+    padding: 5rem 0;
+    background: var(--navy-deep);
+    color: var(--white);
+    text-align: center;
+}
+
+.about-mission-content {
+    max-width: 52rem;
+    margin: 0 auto;
+}
+
+.about-mission .kicker {
+    color: var(--gold);
+}
+
+.about-mission h2 {
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+}
+
+.about-mission-intro {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+}
+
+.about-mission-statement {
+    max-width: 46rem;
+    margin: 0 auto;
+    color: var(--white);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.5rem, 2.7vw, 2rem);
+    line-height: 1.45;
+}
+
+.about-mission-divider {
+    width: 60px;
+    height: 2px;
+    margin: 2rem auto;
+    background: var(--gold);
+}
+
+.about-mission-ending {
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+.about-mission-highlight {
+    margin-bottom: 0;
+    color: var(--gold);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.4;
+}
+
+/* About page responsive styles */
+
+@media (max-width: 767.98px) {
+    .about-section {
+        padding: 3.2rem 0;
+    }
+
+    .about-local-note {
+        padding: 1.5rem;
+    }
+
+    .about-principle-card {
+        padding: 1.6rem;
+    }
+
+    .about-mission {
+        padding: 3.5rem 0;
+    }
+}
+/* =========================================================
+   9. ADVANTAGES
+   ========================================================= */
+
+.advantage-intro h2 {
+    color: var(--navy);
+    font-size: 2.2rem;
+}
+
+.advantage-item {
+    padding: 0 0.4rem;
+    text-align: center;
+}
+
+.icon-circle {
+    display: grid;
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 1rem;
+    place-items: center;
+    border: 1px solid #ddd6c8;
+    border-radius: 50%;
+    color: var(--navy);
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 650;
+}
+
+.icon-circle i {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.advantage-item h3 {
+    margin-bottom: 0.4rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 650;
+}
+
+.advantage-item p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   10. FOCUS CARDS
+   ========================================================= */
+
+.focus-card {
+    position: relative;
+    display: grid;
+    min-height: 300px;
+    overflow: hidden;
+    grid-template-columns: 1.05fr 0.95fr;
+    border: 0;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.focus-card .card-body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.focus-card h3 {
+    margin-bottom: 0.4rem;
+    font-size: 1.7rem;
+}
+
+.focus-media {
+    min-height: 300px;
+    background-position: center;
+    background-size: cover;
+}
+
+.focus-dark {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.focus-dark .focus-media {
+    background-image: url("../img/wall-panel.png");
+}
+
+.focus-sand {
+    background: var(--sand);
+    color: var(--navy);
+}
+
+.focus-sand .focus-media {
+    background-image: url("../img/construction.jpg");
+}
+
+.focus-sand h3,
+.focus-sand a {
+    color: var(--navy);
+}
+
+.focus-link {
+    color: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   11. SERVICES AND INDUSTRIES
+   ========================================================= */
+
+.service-panel,
+.industry-panel {
+    height: 100%;
+    padding: 1.8rem;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    background: var(--white);
+    box-shadow: 0 8px 28px rgba(11, 31, 58, 0.04);
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.service-panel h3,
+.industry-panel h3 {
+    font-size: 1.15rem;
+    line-height: 1.3;
+}
+
+.service-panel p,
+.industry-panel p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.service-panel:hover,
+.industry-panel:hover {
+    transform: translateY(-3px);
+    border-color: #d8dce2;
+    box-shadow: 0 14px 34px rgba(11, 31, 58, 0.08);
+}
+
+
+/* =========================================================
+   12. PROCESS
+   ========================================================= */
+
+.process {
+    position: relative;
+}
+
+.process::before {
+    position: absolute;
+    top: 38px;
+    right: 12%;
+    left: 12%;
+    height: 1px;
+    background: #e4ddd1;
+    content: "";
+}
+
+.step {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.step-num {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 1rem;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 700;
+}
+
+.step h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.02rem;
+    font-weight: 650;
+}
+
+.step p {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   13. STATISTICS BAR
+   ========================================================= */
+
+.stats-bar {
+    padding: 2.4rem 0;
+    background: var(--navy);
+    color: var(--white);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat .icon {
+    margin-bottom: 0.35rem;
+    color: var(--gold);
+    font-size: 1.4rem;
+}
+
+.stat strong {
+    display: block;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.9rem;
+}
+
+.stat span {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   14. CALL TO ACTION
+   ========================================================= */
+
+.cta-band {
+    padding: 2.6rem 0;
+    background: var(--navy-deep);
+    color: var(--white);
+}
+
+.cta-band h2 {
+    margin-bottom: 0.35rem;
+    font-size: 2rem;
+}
+
+
+/* =========================================================
+   15. FORMS
+   ========================================================= */
+
+.form-card {
+    padding: 2rem;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.form-label {
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    padding: 0.7rem 0.85rem;
+    border-color: #ddd6cb;
+    border-radius: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 0.2rem rgba(196, 163, 106, 0.18);
+}
+
+
+/* =========================================================
+   16. LEGAL CONTENT
+   ========================================================= */
+
+.legal-copy {
+    max-width: 48rem;
+    margin: 0 auto;
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   17. FOOTER
+   ========================================================= */
+
+.site-footer {
+    padding: 3.5rem 0 1.4rem;
+    background: #081527;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.92rem;
+}
+
+.site-footer h6 {
+    margin-bottom: 1rem;
+    color: var(--white);
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.site-footer a {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.site-footer a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    margin-top: 2.4rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   18. RESPONSIVE STYLES
+   ========================================================= */
+
+/* Tablets and smaller screens */
+@media (max-width: 991.98px) {
+    .process::before {
+        display: none;
+    }
+
+    .navbar-collapse {
+        padding-top: 1rem;
+    }
+
+    .hero {
+        padding: 2.4rem 0;
+    }
+
+    .hero .row {
+        min-height: auto;
+    }
+
+    .hero-map {
+        min-height: 0;
+    }
+
+    .hero-map img {
+        width: 100%;
+        max-width: 620px;
+        transform: none;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 575.98px) {
+    .focus-card {
+        grid-template-columns: 1fr;
+    }
+
+    .focus-media {
+        min-height: 180px;
+    }
+
+    .founder-copy {
+        padding: 1.8rem 1.4rem;
+    }
+
+    .page-hero {
+        padding: 3rem 0 2rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+}

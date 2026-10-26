@@ -1,0 +1,22 @@
+{% extends "website/base.html" %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ page_title }}</h1>
+  </div>
+</section>
+<section class="section pt-0">
+  <div class="container legal-copy">
+    {% if page_title == "Privacy Policy" %}
+      <p>We collect the name, company, and contact details you submit through our forms so we can respond to sourcing requests. Inquiries are stored in our database and may be emailed to our Istanbul team.</p>
+      <p>We do not sell personal data. You may request access or deletion by writing to info@sourcingconsultant.com.</p>
+    {% else %}
+      <p>This website describes sourcing services offered by Sourcing Consultant. Information on factories, lead times, and pricing is indicative until confirmed in writing after inspection and quotation.</p>
+      <p>Submitted RFPs and consultation requests do not create a supply contract. Any engagement is subject to a separate written agreement.</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

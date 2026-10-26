@@ -1,0 +1,46 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+.envrc
+
+# Local database
+db.sqlite3
+db.sqlite3-journal
+
+# Logs
+*.log
+
+# Build and packaging
+build/
+dist/
+*.egg-info/
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Type checking and linting caches
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.pyre/
+
+# Local files and editor settings
+.DS_Store
+.vscode/
+.idea/
+
+# Django generated files
+staticfiles/

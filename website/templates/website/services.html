@@ -1,0 +1,71 @@
+{% extends "website/base.html" %}
+
+{% block title %}Services{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <p class="kicker">What we do</p>
+    <h1>End-to-end sourcing, from spec to shipment.</h1>
+    <p class="lead col-lg-8 px-0 text-muted">We sit between your buying team and Turkey’s factories—so you get vetted suppliers, negotiated terms, and export that actually arrives as specified.</p>
+  </div>
+</section>
+
+<section class="section pt-0">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <article class="service-panel">
+          <div class="icon-circle mb-3" style="margin:0 0 1rem;">01</div>
+          <h3>Supplier Scouting &amp; Auditing</h3>
+          <p class="text-muted">We shortlist manufacturers against your specs, certifications, capacity, and export history, then visit the floor before you commit.</p>
+          <ul>
+            <li>Factory capability and capacity review</li>
+            <li>Certification and compliance checks</li>
+            <li>Reference orders and export track record</li>
+          </ul>
+        </article>
+      </div>
+      <div class="col-md-6">
+        <article class="service-panel">
+          <div class="icon-circle mb-3" style="margin:0 0 1rem;">02</div>
+          <h3>Quality Assurance</h3>
+          <p class="text-muted">Samples, in-line inspection, and pre-shipment checks protect your brand before goods leave the port.</p>
+          <ul>
+            <li>Sample verification against drawings</li>
+            <li>AQL and packing inspections</li>
+            <li>Photo and video reporting from the line</li>
+          </ul>
+        </article>
+      </div>
+      <div class="col-md-6">
+        <article class="service-panel">
+          <div class="icon-circle mb-3" style="margin:0 0 1rem;">03</div>
+          <h3>Negotiation &amp; Contract Management</h3>
+          <p class="text-muted">We negotiate price, MOQ, Incoterms, tooling, and penalties in Turkish and English so the contract matches the factory reality.</p>
+          <ul>
+            <li>Benchmarking across multiple plants</li>
+            <li>Payment terms and production calendars</li>
+            <li>Bilingual contract support</li>
+          </ul>
+        </article>
+      </div>
+      <div class="col-md-6">
+        <article class="service-panel">
+          <div class="icon-circle mb-3" style="margin:0 0 1rem;">04</div>
+          <h3>Logistics &amp; Export Handling</h3>
+          <p class="text-muted">Documentation, customs, and freight coordination from Istanbul, Izmir, Mersin, and other export hubs to your destination.</p>
+          <ul>
+            <li>Export paperwork and certificates of origin</li>
+            <li>Sea, air, and road options</li>
+            <li>Destination customs support</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <a class="btn btn-navy" href="{% url 'rfp' %}">Start with an RFP</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

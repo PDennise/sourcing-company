@@ -1,0 +1,67 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}Industries{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <p class="kicker">Where we specialise</p>
+    <h1>Wall Panels and construction products, sourced with intent.</h1>
+    <p class="lead col-lg-8 px-0 text-muted">We stay in categories we know well—so factory matching, testing, and export documentation are not generic.</p>
+  </div>
+</section>
+
+<section class="section pt-0">
+  <div class="container">
+    <div class="row g-4 align-items-center mb-5">
+      <div class="col-lg-6">
+        <img class="rounded-4 w-100" src="{% static 'website/img/wall-panel.png' %}" alt="Wall panel">
+      </div>
+      <div class="col-lg-6">
+        <article class="industry-panel">
+          <h2>Wall Panels</h2>
+          <p class="text-muted">Indoor, outdoor, industrial, and commercial fixtures built for performance and export markets.</p>
+          <ul>
+            <li>Wall panels</li>
+            <li>CE, ENEC, and photometric documentation support</li>
+            <li>Private-label and OEM programmes</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+    <div class="row g-4 align-items-center mb-5">
+      <div class="col-lg-6 order-lg-2">
+        <img class="rounded-4 w-100" src="{% static 'website/img/construction.jpg' %}" alt="Construction site">
+      </div>
+      <div class="col-lg-6">
+        <article class="industry-panel">
+          <h2>Construction Products</h2>
+          <p class="text-muted">Building materials, fixtures, hardware, and structural components for developers, distributors, and contractors.</p>
+          <ul>
+            <li>Finishes, hardware, and sanitary fixtures</li>
+            <li>Structural and envelope components</li>
+            <li>Project-based volume programmes</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <img class="rounded-4 w-100" src="{% static 'website/img/warehouse.jpg' %}" alt="Export warehouse">
+      </div>
+      <div class="col-lg-6">
+        <article class="industry-panel">
+          <h2>Custom Sourcing</h2>
+          <p class="text-muted">If your SKU sits next to panels or construction, we can still run a disciplined search across our factory network.</p>
+          <ul>
+            <li>Adjacent categories and project bundles</li>
+            <li>Sample-led qualification</li>
+            <li>Single-window communication in English</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

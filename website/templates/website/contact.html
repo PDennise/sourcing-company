@@ -1,0 +1,33 @@
+{% extends "website/base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <p class="kicker">Contact</p>
+    <h1>{{ page_title }}</h1>
+    <p class="lead col-lg-7 px-0 text-muted">{{ intro }}</p>
+  </div>
+</section>
+<section class="section pt-0">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-7">
+        {% include "website/includes/inquiry_form.html" %}
+      </div>
+      <div class="col-lg-5">
+        <div class="service-panel">
+          <h3>Office</h3>
+          <p class="text-muted">Istanbul, Turkey</p>
+          <p class="mb-1"><a href="mailto:ipek@pandarex.net">ipek@pandarex.net</a></p>
+          <p>+90 541 818 60 89</p>
+          <hr>
+          <p class="mb-2">Prefer a structured brief?</p>
+          <a class="btn btn-ghost" href="{% url 'rfp' %}">Submit an RFP</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
